@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/charmbracelet/bubbles v0.10.2
 	github.com/charmbracelet/lipgloss v0.4.0
+	github.com/gorilla/websocket v1.4.2
 )
 
 require (
