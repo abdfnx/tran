@@ -13,6 +13,8 @@ import (
 const DEFAULT_ADDRESS = "167.71.65.96"
 const DEFAULT_PORT = 80
 
+const RECEIVER_CONNECT_TIMEOUT time.Duration = 5 * time.Minute
+
 const SEND_TEMP_FILE_NAME_PREFIX = "tran-send-tmp"
 const RECEIVE_TEMP_FILE_NAME_PREFIX = "tran-receive-tmp"
 
