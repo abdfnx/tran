@@ -1,0 +1,11 @@
+# build dirs
+dist
+
+# tran files
+*.exe
+*.exe~
+tran
+
+# dependency directories
+vendor
+node_modules
