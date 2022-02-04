@@ -1,0 +1,9 @@
+Welcome to Tran 👋
+
+you can do your first steps
+
+- `$ tran`
+- `$ tran send README.md`
+- `$ tran receive $CODE`
+
+run `tran -h` for get help 📄
