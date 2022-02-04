@@ -7,8 +7,8 @@ import (
 	"github.com/mgutz/ansi"
 	"github.com/abdfnx/looker"
 	"github.com/abdfnx/tran/api"
-	"github.com/abdfnx/tran/config"
 	"github.com/abdfnx/tran/cmd/factory"
+	"github.com/abdfnx/tran/internal/config"
 )
 
 func Check(buildVersion string) {
