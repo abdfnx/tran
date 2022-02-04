@@ -78,3 +78,30 @@ func AltKey() string {
 		return "alt"
 	}
 }
+
+var HelpContent = `# Help Guide` + "\n" +
+"* `tab`: Switch between boxes\n" +
+"* `up`: Move up\n" +
+"* `down`: Move down\n" +
+"* `left`: Go back a directory\n" +
+"* `right`: Read file or enter directory\n" +
+"* `V`: View directory\n" +
+"* `T`: Go to top\n" +
+"* `G`: Go to bottom\n" +
+"* `~`: Go to your home directory\n" +
+"* `/`: Go to root directory\n" +
+"* `.`: Toggle hidden files and directories\n" +
+"* `D`: Only show directories\n" +
+"* `F`: Only show files\n" +
+"* `E`: Edit file\n" +
+"* `" + CtrlKey() + "+s`: Send files/directories to remote\n" +
+"* `" + CtrlKey() + "+r`: Receive files/directories from remote\n" +
+"* `" + CtrlKey() + "+f`: Find files and directories by name\n" +
+"* `q`/`" + CtrlKey() + "+q`: Quit"
+
+var InfoContent = `# Info` + "\n" +
+"* Address: **" + DEFAULT_ADDRESS + "**\n" +
+"* Port: **" + fmt.Sprintf("%d", DEFAULT_PORT) + "**\n" +
+"* OS: **" + runtime.GOOS + "**\n" +
+"* Arch: **" + runtime.GOARCH + "**\n" +
+"* Author: " + "[**@abdfnx**](https://github.com/abdfnx)"
