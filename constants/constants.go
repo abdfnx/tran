@@ -69,3 +69,12 @@ func CtrlKey() string {
 		return "ctrl"
 	}
 }
+
+func AltKey() string {
+	// if os is macos, then return "⌥"
+	if runtime.GOOS == "darwin" {
+		return "⌥"
+	} else {
+		return "alt"
+	}
+}
