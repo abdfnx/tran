@@ -27,7 +27,7 @@ require (
 	github.com/schollz/pake/v3 v3.0.3
 	github.com/spf13/cobra v1.3.0
 	github.com/spf13/pflag v1.0.5
-	github.com/spf13/viper v1.10.0
+	github.com/spf13/viper v1.10.1
 	github.com/tidwall/gjson v1.14.0
 	golang.org/x/crypto v0.0.0-20220131195533-30dcbda58838
 	golang.org/x/sys v0.0.0-20211210111614-af8b64212486
