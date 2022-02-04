@@ -1,0 +1,55 @@
+#!/bin/bash
+set -e
+
+repo="abdfnx/gh-tran"
+tag="CLI_VERSION"
+buildDate="CLI_VERSION_DATE"
+
+extensionPath="$(dirname "$0")"
+arch="$(uname -m)"
+
+exe=""
+
+if uname -a | grep Msys > /dev/null; then
+  if [ $arch = "x86_64" ]; then
+    exe="windows-x86_64"
+  elif [ $arch = "i686" ]; then
+    exe="windows-i386"
+  elif [ $arch = "i386" ]; then
+    exe="windows-i386"
+  fi
+elif uname -a | grep Darwin > /dev/null; then
+  if [ $arch = "x86_64" ]; then
+    exe="darwin-x86_64"
+  fi
+elif uname -a | grep Linux > /dev/null; then
+  if [ $arch = "x86_64" ]; then
+    exe="linux-x86_64"
+  elif [ $arch = "i686" ]; then
+    exe="linux-i38"
+  elif [ $arch = "i386" ]; then
+    exe="linux-i386"
+  fi
+fi
+
+if [ "${exe}" == "" ]; then
+  if [ "$(which go)" = "" ]; then
+    echo "go must be installed to use this gh extension on this platform"
+    exit 1
+  fi
+
+  exe="cmd.out"
+
+  cd "${extensionPath}" > /dev/null
+  go build -o "${exe}" -ldflags "-X main.version=${tag} -X main.buildDate=${buildDate}"
+  cd - > /dev/null
+else
+  if [[ ! -x "${extensionPath}/bin/${exe}" ]]; then
+    mkdir -p "${extensionPath}/bin"
+    rm -f "${extensionPath}/bin/*"
+    gh release -R"${repo}" download "${tag}" -p "${exe}" --dir="${extensionPath}/bin"
+    chmod +x "${extensionPath}/bin/${exe}"
+  fi
+fi
+
+exec "${extensionPath}/bin/${exe}" "$@"

@@ -1,0 +1,19 @@
+{
+  "name": "gh-trn-brew",
+  "version": "0.0.0",
+  "description": "gh cli extension of tran",
+  "author": "@abdfnx",
+  "main": "gh-trn.js",
+  "scripts": {
+    "start": "node gh-trn.js"
+  },
+  "keywords": [
+    "tran",
+    "github"
+  ],
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.5"
+  }
+}
