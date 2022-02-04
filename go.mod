@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.2
+	github.com/abdfnx/looker v0.1.0
 	github.com/abdfnx/resto v0.1.6
 	github.com/alecthomas/chroma v0.10.0
 	github.com/briandowns/spinner v1.18.0
@@ -12,10 +13,13 @@ require (
 	github.com/charmbracelet/glamour v0.5.0
 	github.com/charmbracelet/lipgloss v0.4.0
 	github.com/disintegration/imaging v1.6.2
+	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
 	github.com/gorilla/websocket v1.4.2
 	github.com/klauspost/pgzip v1.2.5
 	github.com/ledongthuc/pdf v0.0.0-20210621053716-e28cb8259002
 	github.com/lucasb-eyer/go-colorful v1.2.0
+	github.com/mattn/go-colorable v0.1.12
+	github.com/mattn/go-isatty v0.0.14
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d
 	github.com/muesli/reflow v0.3.0
 	github.com/muesli/termenv v0.9.0
@@ -42,8 +46,6 @@ require (
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/klauspost/compress v1.14.2 // indirect
 	github.com/magiconair/properties v1.8.5 // indirect
-	github.com/mattn/go-colorable v0.1.12 // indirect
-	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
 	github.com/microcosm-cc/bluemonday v1.0.17 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
