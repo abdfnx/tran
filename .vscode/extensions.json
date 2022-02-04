@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "golang.go",
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "PKief.material-icon-theme",
+    "aaron-bond.better-comments"
+  ]
+}

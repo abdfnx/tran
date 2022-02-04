@@ -1,0 +1,13 @@
+{
+  "search.exclude": {
+    "vendor/**": true
+  },
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[go]": {
+    "editor.formatOnSave": true
+  }
+}
