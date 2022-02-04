@@ -16,6 +16,7 @@ require (
 	github.com/klauspost/pgzip v1.2.5
 	github.com/ledongthuc/pdf v0.0.0-20210621053716-e28cb8259002
 	github.com/lucasb-eyer/go-colorful v1.2.0
+	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d
 	github.com/muesli/reflow v0.3.0
 	github.com/muesli/termenv v0.9.0
 	github.com/schollz/pake/v3 v3.0.3
