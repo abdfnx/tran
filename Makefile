@@ -9,3 +9,21 @@ build:
 
 install: tran
 		@mv tran /usr/local/bin
+
+btc: # build tran container
+		@docker build --file ./docker/vm/Dockerfile -t trancli/tran . && \
+		docker push trancli/tran
+
+btcwc: # build tran container with cache
+		@docker pull trancli/tran:latest && \
+		docker build -t trancli/tran --cache-from trancli/tran:latest . && \
+		docker push trancli/tran
+
+bftc: # build full tran container
+		@docker build --file ./docker/container/Dockerfile -t trancli/tran-full . && \
+		docker push trancli/tran-full
+
+bftcwc: # build full tran container with cache
+		@docker pull trancli/tran-full:latest && \
+		docker build -t trancli/tran-full --cache-from trancli/tran-full:latest . && \
+		docker push trancli/tran-full

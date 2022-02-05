@@ -52,6 +52,6 @@ RUN sudo rm -rf $src
 
 ### wget new files ###
 RUN wget https://abdfnx.github.io/tran/scripts/shell/zshrc -o $src
-RUN wget https://abdfnx.github.io/tran/scripts/shell/tran/README
+RUN wget https://abdfnx.github.io/tran/scripts/shell/README
 
 CMD /bin/bash -c "cat README && zsh"
