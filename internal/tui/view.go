@@ -6,6 +6,8 @@ import (
 	"strings"
 
 	"github.com/abdfnx/tran/dfs"
+	"github.com/abdfnx/tran/tools"
+	"github.com/abdfnx/tran/models"
 	"github.com/abdfnx/tran/renderer"
 	"github.com/abdfnx/tran/constants"
 	"github.com/charmbracelet/lipgloss"
@@ -244,6 +246,25 @@ func (b Bubble) errorView(msg string) string {
 func (b Bubble) View() string {
 	if !b.ready {
 		return fmt.Sprintf("%s %s", b.spinner.View(), "loading...")
+	}
+
+	if b.sendMode {
+		selectedFile := b.treeFiles[b.treeCursor]
+
+		tools.RandomSeed()
+
+		err := ValidateTranxAddress()
+
+		if err != nil {
+			fmt.Println(err)
+		}
+
+		fn := []string{selectedFile.Name()}
+
+		HandleSendCommand(models.TranOptions{
+			TranxAddress: constants.DEFAULT_ADDRESS,
+			TranxPort:    constants.DEFAULT_PORT,
+		}, fn)
 	}
 
 	var primaryBox string

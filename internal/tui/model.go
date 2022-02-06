@@ -39,6 +39,7 @@ type Bubble struct {
 	showDirectoriesOnly    bool
 	showFileTreePreview    bool
 	findMode               bool
+	sendMode			   bool
 	receiveMode			   bool
 	showBoxSpinner         bool
 	foundFilesPaths        []string

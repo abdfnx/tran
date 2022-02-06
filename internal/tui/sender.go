@@ -5,14 +5,15 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/abdfnx/tran/tools"
-	"github.com/muesli/reflow/indent"
 	"github.com/abdfnx/tran/constants"
-	"github.com/muesli/reflow/wordwrap"
-	"github.com/charmbracelet/lipgloss"
-	tea "github.com/charmbracelet/bubbletea"
-	"github.com/charmbracelet/bubbles/spinner"
+	"github.com/abdfnx/tran/tools"
 	"github.com/charmbracelet/bubbles/progress"
+	"github.com/charmbracelet/bubbles/spinner"
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
+	"github.com/muesli/reflow/indent"
+	"github.com/muesli/reflow/wordwrap"
+	"github.com/muesli/termenv"
 )
 
 // ui state flows from the top down
@@ -45,6 +46,8 @@ func NewSenderUI() *tea.Program {
 	m := senderUIModel{progressBar: constants.ProgressBar}
 	m.resetSpinner()
 	var opts []tea.ProgramOption
+
+	termenv.AltScreen()
 
 	opts = append(opts, tea.WithAltScreen())
 

@@ -2,15 +2,12 @@ package tui
 
 import (
 	"os"
-	"fmt"
 	"errors"
 	"os/exec"
 	"path/filepath"
 
 	"github.com/muesli/termenv"
 	"github.com/abdfnx/tran/dfs"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/models"
 	"github.com/abdfnx/tran/constants"
 	"github.com/charmbracelet/glamour"
 	"github.com/charmbracelet/lipgloss"
@@ -335,22 +332,7 @@ func (b *Bubble) handleKeys(msg tea.KeyMsg) tea.Cmd {
 			}
 
 		case key.Matches(msg, b.keyMap.Send):
-			selectedFile := b.treeFiles[b.treeCursor]
-
-			tools.RandomSeed()
-
-			err := ValidateTranxAddress()
-
-			if err != nil {
-				fmt.Println(err)
-			}
-
-			fn := []string{selectedFile.Name()}
-
-			HandleSendCommand(models.TranOptions{
-				TranxAddress: constants.DEFAULT_ADDRESS,
-				TranxPort:    constants.DEFAULT_PORT,
-			}, fn)
+			b.sendMode = true
 
 		case key.Matches(msg, b.keyMap.Escape):
 			b.showCommandInput = false
@@ -358,6 +340,7 @@ func (b *Bubble) handleKeys(msg tea.KeyMsg) tea.Cmd {
 			b.showHiddenFiles = true
 			b.showDirectoriesOnly = false
 			b.findMode = false
+			b.sendMode = false
 			b.receiveMode = false
 			b.errorMsg = ""
 			b.foundFilesPaths = nil
@@ -495,6 +478,7 @@ func (b Bubble) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case findFilesByNameMsg:
 			b.showCommandInput = false
 			b.findMode = false
+			b.sendMode = false
 			b.receiveMode = false
 			b.treeCursor = 0
 			b.treeFiles = msg.entries
@@ -522,9 +506,9 @@ func (b Bubble) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			b.width = msg.Width
 			b.height = msg.Height
 
-			b.primaryViewport.Width = (msg.Width / 3) - b.primaryViewport.Style.GetHorizontalFrameSize()
+			b.primaryViewport.Width = (msg.Width / 5) - b.primaryViewport.Style.GetHorizontalFrameSize()
 			b.primaryViewport.Height = msg.Height - constants.StatusBarHeight - b.primaryViewport.Style.GetVerticalFrameSize()
-			b.secondaryViewport.Width = (msg.Width / 3) - b.secondaryViewport.Style.GetHorizontalFrameSize()
+			b.secondaryViewport.Width = (msg.Width / 2) - b.secondaryViewport.Style.GetHorizontalFrameSize()
 			b.secondaryViewport.Height = msg.Height - constants.StatusBarHeight - b.secondaryViewport.Style.GetVerticalFrameSize()
 			b.thirdViewport.Width = (msg.Width / 3) - b.thirdViewport.Style.GetHorizontalFrameSize() - 1
 			b.thirdViewport.Height = msg.Height - constants.StatusBarHeight - b.thirdViewport.Style.GetVerticalFrameSize()
