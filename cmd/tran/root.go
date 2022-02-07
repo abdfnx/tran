@@ -27,6 +27,10 @@ func Execute(f *factory.Factory, version string, buildDate string) *cobra.Comman
 			# Open Tran UI
 			tran
 
+			# Open with specific path
+
+			tran --start-dir $PATH
+
 			# Send files to a remote computer
 			tran send <FILE || DIRECTORY>
 
