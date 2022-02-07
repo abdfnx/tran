@@ -58,14 +58,16 @@ tran
 
 ```
 tran --start-dir $PATH
-
 ```
+
 * Send files to a remote computer
+
 ```
 tran send <FILE || DIRECTORY>
-
 ```
+
 * Receive files from a remote computer
+
 ```
 tran receive <PASSWORD>
 ```
