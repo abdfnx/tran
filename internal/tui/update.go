@@ -518,18 +518,11 @@ func (b Bubble) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			hc, _ := glamour.Render(constants.HelpContent, "dark")
 			ic, _ := glamour.Render(constants.InfoContent, "dark")
 
-			boxStyle := lipgloss.NewStyle().
-				BorderStyle(lipgloss.RoundedBorder()).
-				BorderTop(true).
-				BorderBottom(true).
-				BorderLeft(true).
-				BorderRight(true)
-
 			hs := lipgloss.NewStyle().
-				BorderStyle(lipgloss.DoubleBorder()).
+				BorderStyle(lipgloss.NormalBorder()).
 				BorderBottom(true)
 
-			b.thirdViewport.SetContent(hs.Render(hc) + "\n\n" + boxStyle.Render(ic))
+			b.thirdViewport.SetContent(hs.Render(hc) + "\n\n" + ic)
 
 			switch {
 				case b.showFileTreePreview:

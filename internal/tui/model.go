@@ -53,9 +53,9 @@ func New() Bubble {
 	cfg := config.GetConfig()
 	theme := theme.GetTheme("default")
 
-	primaryBoxBorder := lipgloss.NormalBorder()
-	secondaryBoxBorder := lipgloss.NormalBorder()
-	thirdBoxBorder := lipgloss.NormalBorder()
+	primaryBoxBorder := lipgloss.RoundedBorder()
+	secondaryBoxBorder := lipgloss.RoundedBorder()
+	thirdBoxBorder := lipgloss.RoundedBorder()
 	primaryBoxBorderColor := theme.ActiveBoxBorderColor
 	secondaryBoxBorderColor := theme.InactiveBoxBorderColor
 	thirdBoxBorderColor := theme.InactiveBoxBorderColor

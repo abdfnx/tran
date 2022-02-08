@@ -271,9 +271,9 @@ func (b Bubble) View() string {
 	var secondaryBox string
 	var thirdBox string
 
-	primaryBoxBorder := lipgloss.NormalBorder()
-	secondaryBoxBorder := lipgloss.NormalBorder()
-	thirdBoxBorder := lipgloss.NormalBorder()
+	primaryBoxBorder := lipgloss.RoundedBorder()
+	secondaryBoxBorder := lipgloss.RoundedBorder()
+	thirdBoxBorder := lipgloss.RoundedBorder()
 	primaryBoxBorderColor := b.theme.InactiveBoxBorderColor
 	secondaryBoxBorderColor := b.theme.InactiveBoxBorderColor
 	thirdBoxBorderColor := b.theme.InactiveBoxBorderColor
