@@ -7,3 +7,7 @@ updates:
       interval: "daily"
     reviewers:
       - abdfnx
+  - package-ecosystem: npm
+    directory: "/scripts/gh-tran"
+    schedule:
+      interval: "daily"
