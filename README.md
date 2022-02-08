@@ -113,6 +113,17 @@ config:
 * <kbd>ctrl+f</kbd>: Find files and directories by name
 * <kbd>q</kbd>/<kbd>ctrl+q</kbd>: Quit
 
+### Technologies Used in Tran
+
+- [**Charm**](https://charm.sh)
+- [**Chroma**](github.com/alecthomas/chroma)
+- [**Imaging**](https://github.com/disintegration/imaging)
+- [**Gorilla Websocket**](https://github.com/gorilla/websocket)
+- [**PAKE**](https://github.com/schollz/pake)
+- [**Cobra**](https://github.com/spf13/cobra)
+- [**GJson**](https://github.com/tidwall/gjson)
+- [**Termenv**](https://github.com/muesli/termenv)
+
 ### License
 
 tran is licensed under the terms of [MIT](https://github.com/abdfnx/tran/blob/main/LICENSE) license.

@@ -56,7 +56,9 @@ jobs:
           cd gh-tran
           ./release.sh $TAG $DATE
           cd ../scripts/gh-tran
-          yarn && yarn start
+          yarn
+          cd ../..
+          make ght
 
       - name: Commit files
         env:

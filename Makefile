@@ -27,3 +27,6 @@ bftcwc: # build full tran container with cache
 		@docker pull trancli/tran-full:latest && \
 		docker build -t trancli/tran-full --cache-from trancli/tran-full:latest . && \
 		docker push trancli/tran-full
+
+ght:
+		@node ./scripts/gh-tran/gh-trn.js
