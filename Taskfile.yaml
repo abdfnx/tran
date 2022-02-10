@@ -1,0 +1,80 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  TRAN_CONTAINER: trancli/tran
+  TRAN_FULL_CONTAINER: trancli/tran-full
+
+tasks:
+  default:
+    deps: [ build, ght ]
+
+  set-tag-and-date:
+    cmds:
+      - if [ -f "date.txt" ]; then rm date.txt; fi
+      - if [ -f "tag.txt" ]; then rm tag.txt; fi
+      - echo {{ now | date "2006-01-02" }} >> date.txt
+      - git describe --abbrev=0 --tags >> tag.txt
+
+  build:
+    cmds:
+      - task: set-tag-and-date
+      - go mod tidy
+      - go build -ldflags "-X main.version=$(cat tag.txt) -X main.buildDate=$(cat date.txt)" -o tran
+
+  install:
+    deps: [ build ]
+    cmds:
+      - sudo mv tran /usr/local/bin
+
+  tran-container:
+    deps: [ just-build-tran-container, build-tran-container, build-tran-container-with-cache ]
+
+  tran-full-container:
+    deps: [ just-build-tran-full-container, build-tran-full-container, build-full-tran-container-with-cache ]
+
+  just-build-tran-container:
+    dir: ./docker/vm
+    cmds:
+      - docker build -t "{{ .TRAN_CONTAINER }}" .
+
+  build-tran-container:
+    deps: [ just-build-tran-container ]
+    dir: ./docker/vm
+    cmds:
+      - docker push "{{ .TRAN_CONTAINER }}"
+
+  build-tran-container-with-cache:
+    cmds:
+      - docker pull "{{ .TRAN_CONTAINER }}":latest
+      - docker build -t "{{ .TRAN_CONTAINER }}" --cache-from "{{ .TRAN_CONTAINER }}":latest .
+      - docker push "{{ .TRAN_CONTAINER }}"
+
+  just-build-tran-full-container:
+    dir: ./docker/container
+    cmds:
+      - docker build  -t "{{ .TRAN_CONTAINER }}" . 
+
+  build-tran-full-container:
+    deps: [ just-build-tran-full-container ]
+    dir: ./docker/container
+    cmds:
+      - docker push "{{ .TRAN_CONTAINER }}"
+
+  build-full-tran-container-with-cache:
+    cmds:
+      - docker pull "{{ .TRAN_CONTAINER }}":latest && \
+      - docker build -t "{{ .TRAN_CONTAINER }}" --cache-from "{{ .TRAN_CONTAINER }}":latest . && \
+      - docker push "{{ .TRAN_CONTAINER }}"
+
+  check_node_moduels:
+    dir: ./scripts/gh-tran
+    cmds:
+      - if ! [ -d "node_modules" ]; then yarn; fi
+
+  ght:
+    deps: [ build ]
+    cmds:
+      - task: check_node_moduels
+      - node ./scripts/gh-tran/gh-trn.js

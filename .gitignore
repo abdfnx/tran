@@ -16,4 +16,6 @@
 vendor
 node_modules
 
+# Build Files
 date.txt
+tag.txt

@@ -1,0 +1,149 @@
+name: Tran CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+jobs:
+  bfs: # build from source
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Building From Source
+      run: |
+        go mod tidy
+        go run ./scripts/date.go >> date.txt
+        go build -ldflags "-X main.version=$(git describe --abbrev=0 --tags) -X main.buildDate=$(cat date.txt)" -o tran
+
+    - name: Run Help
+      run: ./tran help
+
+  bfs_windows: # build from source (windows)
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Building From Source
+      run: |
+        .\scripts\bfs.ps1
+        echo "::add-path::C:\Users\runneradmin\AppData\Local\tran\bin\;"
+
+    - name: Run Help
+      run: tran help
+
+  from_script:
+    needs: [ bfs ]
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install from script
+      run: curl -sL https://cutt.ly/tran-cli | bash
+
+    - name: Run Help
+      run: tran help
+
+  from_script_windows:
+    needs: [ bfs_windows ]
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install from script
+      run: |
+        iwr -useb https://cutt.ly/tran-win | iex
+        echo "::add-path::C:\Users\runneradmin\AppData\Local\tran\bin\;"
+
+    - name: Run Help
+      run: tran help
+
+  go:
+    needs: [ bfs, bfs_windows ]
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Install from Go
+      run: go install github.com/abdfnx/tran@latest
+
+    - name: Run Help
+      run: tran help
+
+  snapshot:
+    needs: [ bfs, bfs_windows, go ]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+
+      - name: Set up `GoReleaser`
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          install-only: true
+
+      - name: Set up `Date`
+        run: go run ./scripts/date.go >> date.txt
+
+      - name: Build
+        run: BuildDate="$(cat date.txt)" goreleaser release --snapshot --rm-dist --timeout 100m
+
+  homebrew:
+    needs: [ bfs, snapshot ]
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Get Tran via homebrew
+      run: brew install abdfnx/tap/tran
+
+    - name: Run `tran help`
+      run: tran help
+
+  # via_docker:
+  #   needs: [ bfs, from_script, go ]
+
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   - uses: actions/checkout@v2
+
+  #   - name: Run in docker container
+  #     run: docker run --rm -iv trancli/tran -h
