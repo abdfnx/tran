@@ -116,7 +116,7 @@ config:
 ### Technologies Used in Tran
 
 - [**Charm**](https://charm.sh)
-- [**Chroma**](github.com/alecthomas/chroma)
+- [**Chroma**](https://github.com/alecthomas/chroma)
 - [**Imaging**](https://github.com/disintegration/imaging)
 - [**Gorilla Websocket**](https://github.com/gorilla/websocket)
 - [**PAKE**](https://github.com/schollz/pake)
