@@ -55,3 +55,4 @@ var NewReceiveCmd = &cobra.Command{
 
 var NewAuthCmd = Auth(factory.New())
 var NewGHConfigCmd = GHConfig(factory.New())
+var NewGHRepoCmd = Repo(factory.New())

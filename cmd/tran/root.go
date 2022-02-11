@@ -100,6 +100,7 @@ func Execute(f *factory.Factory, version string, buildDate string) *cobra.Comman
 		app.NewSendCmd,
 		app.NewReceiveCmd,
 		app.NewGHConfigCmd,
+		app.NewGHRepoCmd,
 		versionCmd,
 	)
 
