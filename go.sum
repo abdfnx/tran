@@ -73,6 +73,8 @@ github.com/abdfnx/git_config v0.0.3/go.mod h1:MVrl8232db9AG+U7riNnkyzn7TxczNmUhP
 github.com/abdfnx/git_config v0.0.32/go.mod h1:ZUF8HzpOLtnx4rbG3r4TeutEOfE1ys+Qd33egGNxcoM=
 github.com/abdfnx/git_config v0.0.33/go.mod h1:issGEj0pMwM6KQGClUVEJmpD39EFAhtj1EgcTDW3J1o=
 github.com/abdfnx/git_config v0.0.34/go.mod h1:Unb6Ey03cySt9pCobmmIsPl0vkNiZb0ztdDpTYrRazM=
+github.com/abdfnx/gosh v0.3.5 h1:AXl13OJ2lzruB4goqzjW5jjjL8Hfk6gPcQ2Xsnbvv2c=
+github.com/abdfnx/gosh v0.3.5/go.mod h1:bho3zdOB7bNUOZDeI5+CSjoiF+MHmzHWqHHDAQiCq1c=
 github.com/abdfnx/looker v0.1.0 h1:tMN7E0wKIgbydAPPQ1RkppJ1bGHn+B+y9PZy7mwa+3U=
 github.com/abdfnx/looker v0.1.0/go.mod h1:QVfPHnredPBUg4R+MtEkZbMBbqrgtoaj0JHO3KYkvyE=
 github.com/abdfnx/resto v0.1.6 h1:yOM9O9bpMP4lb2ox0U7/gcFXO78P5eUZBxWuKrfdrFA=

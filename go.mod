@@ -6,6 +6,7 @@ require (
 	github.com/AlecAivazis/survey/v2 v2.3.2
 	github.com/MakeNowJust/heredoc v1.0.0
 	github.com/abdfnx/gh v0.1.41
+	github.com/abdfnx/gosh v0.3.5
 	github.com/abdfnx/looker v0.1.0
 	github.com/abdfnx/resto v0.1.6
 	github.com/alecthomas/chroma v0.10.0
@@ -14,6 +15,7 @@ require (
 	github.com/charmbracelet/bubbletea v0.19.3
 	github.com/charmbracelet/glamour v0.5.0
 	github.com/charmbracelet/lipgloss v0.4.0
+	github.com/david-tomson/tran-git v0.0.2
 	github.com/disintegration/imaging v1.6.2
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
 	github.com/gorilla/websocket v1.4.2
@@ -44,7 +46,6 @@ require (
 	github.com/cli/safeexec v1.0.0 // indirect
 	github.com/containerd/console v1.0.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/david-tomson/tran-git v0.0.2 // indirect
 	github.com/dlclark/regexp2 v1.4.0 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
