@@ -28,7 +28,6 @@ func Execute(f *factory.Factory, version string, buildDate string) *cobra.Comman
 			tran
 
 			# Open with specific path
-
 			tran --start-dir $PATH
 
 			# Send files to a remote computer
@@ -36,6 +35,12 @@ func Execute(f *factory.Factory, version string, buildDate string) *cobra.Comman
 
 			# Receive files from a remote computer
 			tran receive <PASSWORD>
+			
+			# Authenticate
+			tran auth login
+			
+			# Sync your tran config file
+			tran sync start
 		`),
 		Annotations: map[string]string{
 			"help:tellus": heredoc.Doc(`
