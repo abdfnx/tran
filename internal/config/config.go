@@ -38,23 +38,18 @@ func defualtEditor() string {
 func LoadConfig(startDir *pflag.Flag) {
 	var err error
 
-	if runtime.GOOS != "windows" {
-		homeDir, err := dfs.GetHomeDirectory()
+	homeDir, err := dfs.GetHomeDirectory()
 
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		err = dfs.CreateDirectory(filepath.Join(homeDir, ".config", "tran"))
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		viper.AddConfigPath("$HOME/.config/tran")
-	} else {
-		viper.AddConfigPath("$HOME")
+	if err != nil {
+		log.Fatal(err)
 	}
 
+	err = dfs.CreateDirectory(filepath.Join(homeDir, ".config", "tran"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	viper.AddConfigPath("$HOME/.config/tran")
 	viper.SetConfigName("tran")
 	viper.SetConfigType("yml")
 

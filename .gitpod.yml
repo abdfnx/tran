@@ -1,3 +1,5 @@
 tasks:
   - init: go get -d ./...
-    command: curl -fsSL https://cutt.ly/tran-cli | bash
+    command: |
+      brew install go-task/tap/go-task
+      curl -fsSL https://cutt.ly/tran-cli | bash
