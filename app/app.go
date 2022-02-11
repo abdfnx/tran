@@ -8,6 +8,7 @@ import (
 	"github.com/abdfnx/tran/models"
 	"github.com/abdfnx/tran/constants"
 	"github.com/abdfnx/tran/internal/tui"
+	"github.com/abdfnx/gh/pkg/cmd/factory"
 )
 
 var NewSendCmd = &cobra.Command{
@@ -51,3 +52,6 @@ var NewReceiveCmd = &cobra.Command{
 		return nil
 	},
 }
+
+var NewAuthCmd = Auth(factory.New())
+var NewGHConfigCmd = GHConfig(factory.New())

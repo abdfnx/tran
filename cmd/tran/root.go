@@ -96,8 +96,10 @@ func Execute(f *factory.Factory, version string, buildDate string) *cobra.Comman
 
 	// Add sub-commands to root command
 	rootCmd.AddCommand(
+		app.NewAuthCmd,
 		app.NewSendCmd,
 		app.NewReceiveCmd,
+		app.NewGHConfigCmd,
 		versionCmd,
 	)
 
