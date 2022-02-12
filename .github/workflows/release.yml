@@ -32,6 +32,9 @@ jobs:
         with:
           install-only: true
 
+      - name: Set up `Task`
+        uses: arduino/setup-task@v1
+
       - name: Set up `Tag`
         id: ghtag
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
@@ -58,7 +61,7 @@ jobs:
           cd ../scripts/gh-tran
           yarn
           cd ../..
-          make ght
+          task ght
 
       - name: Commit files
         env:
@@ -86,5 +89,5 @@ jobs:
 
       - name: Build Tran Containers
         run: |
-          make btc
-          make bftc
+          task build-tran-container
+          task build-tran-full-container

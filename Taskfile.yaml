@@ -14,7 +14,7 @@ tasks:
     cmds:
       - if [ -f "date.txt" ]; then rm date.txt; fi
       - if [ -f "tag.txt" ]; then rm tag.txt; fi
-      - echo {{ now | date "2006-01-02" }} >> date.txt
+      - go run ./scripts/date.go >> date.txt
       - git describe --abbrev=0 --tags >> tag.txt
 
   build:
