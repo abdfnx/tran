@@ -80,27 +80,8 @@ jobs:
     - name: Run Help
       run: tran help
 
-  go:
-    needs: [ bfs, bfs_windows ]
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.17
-
-    - name: Install from Go
-      run: go install github.com/abdfnx/tran@latest
-
-    - name: Run Help
-      run: tran help
-
   snapshot:
-    needs: [ bfs, bfs_windows, go ]
+    needs: [ bfs, bfs_windows ]
 
     runs-on: ubuntu-latest
 
