@@ -87,6 +87,11 @@ jobs:
           username: ${{ secrets.DOCKER_ID }}
           password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
 
+      - name: Build tran from Docker
+        run: |
+          task build
+          cp tran ./docker/vm
+
       - name: Build Tran Containers
         run: |
           task build-tran-container

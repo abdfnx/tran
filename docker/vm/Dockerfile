@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-RUN apk update && apk upgrade && apk add --no-cache ca-certificates curl
+RUN apk update && apk upgrade && apk add --no-cache ca-certificates
 
-RUN curl -sL https://cutt.ly/tran-cli | bash
+COPY tran /usr/bin/tran
 
-ENTRYPOINT ["/usr/local/bin/tran"]
+ENTRYPOINT ["/usr/bin/tran"]
