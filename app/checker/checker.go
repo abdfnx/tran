@@ -39,7 +39,7 @@ func Check(buildVersion string) {
 		return ""
 	}
 
-	if buildVersion != latestVersion && cfg.Tran.ShowUpdates != false {
+	if buildVersion != latestVersion && cfg.Tran.ShowUpdates {
 		fmt.Fprintf(stderr, "%s %s → %s\n",
 		ansi.Color("There's a new version of ", "yellow") + ansi.Color("tran", "cyan") + ansi.Color(" is avalaible:", "yellow"),
 		ansi.Color(buildVersion, "cyan"),
