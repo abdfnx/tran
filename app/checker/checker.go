@@ -18,7 +18,6 @@ func Check(buildVersion string) {
 
 	latestVersion := api.GetLatest()
 	isFromHomebrewTap := isUnderHomebrew()
-	isFromGo := isUnderGo()
 	isFromUsrBinDir := isUnderUsr()
 	isFromGHCLI := isUnderGHCLI()
 	isFromAppData := isUnderAppData()
@@ -26,8 +25,6 @@ func Check(buildVersion string) {
 	var command = func() string {
 		if isFromHomebrewTap {
 			return "brew upgrade tran"
-		} else if isFromGo {
-			return "go get -u github.com/abdfnx/tran"
 		} else if isFromUsrBinDir {
 			return "curl -fsSL https://cutt.ly/tran-cli | bash"
 		} else if isFromGHCLI {
@@ -55,10 +52,6 @@ var tranExe, _ = looker.LookPath("tran")
 
 func isUnderHomebrew() bool {
 	return strings.Contains(tranExe, "brew")
-}
-
-func isUnderGo() bool {
-	return strings.Contains(tranExe, "go")
 }
 
 func isUnderUsr() bool {

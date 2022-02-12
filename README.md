@@ -9,9 +9,6 @@
 
 ## Installation
 
-<details>
-<summary><strong>ways</strong></summary>
-
 ### Using script
 
 * Shell
@@ -34,18 +31,11 @@ iwr -useb https://cutt.ly/tran-win | iex
 brew install abdfnx/tap/tran
 ```
 
-### Go package manager
-
-```bash
-go install github.com/abdfnx/tran@latest
-```
-
 ### GitHub CLI
 
 ```bash
 gh extension install abdfnx/gh-tran
 ```
-</details>
 
 ## Usage
 

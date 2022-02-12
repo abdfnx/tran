@@ -16,11 +16,11 @@ const passwordLength = 4
 // GeneratePassword generates a random password prefixed with the supplied id.
 func GeneratePassword(id int) models.Password {
 	var words []string
-	hitlistSize := len(data.SpaceWordList)
+	hitlistSize := len(data.PasswordList)
 
 	// generate three unique words
 	for len(words) != passwordLength {
-		candidateWord := data.SpaceWordList[rand.Intn(hitlistSize)]
+		candidateWord := data.PasswordList[rand.Intn(hitlistSize)]
 		if !Contains(words, candidateWord) {
 			words = append(words, candidateWord)
 		}
