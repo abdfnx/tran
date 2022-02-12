@@ -63,6 +63,18 @@ tran send <FILE || DIRECTORY>
 tran receive <PASSWORD>
 ```
 
+* Authenticate with github
+
+```
+tran auth login
+```
+
+* Sync your tran config file
+
+```
+tran sync start
+```
+
 ### Tran Config file
 
 > tran config file is located at `~/.config/tran/tran.yml` | `$HOME/tran.yml`
