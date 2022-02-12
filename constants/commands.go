@@ -19,11 +19,9 @@ func Fetch_ml() string {
 func Start_w() string {
 	return `
 		$username = tran auth get-username
-		$TRANDIR = $HOME\.config\tran
-		cd $TRANDIR
+		cd $HOME\.config\tran
 		git init
-		Write-Host "# My tran config - $username" >> $TRANDIR\README.md
-		tran repo create .tran -d "My tran config - $username" --private -y
+		tran gh-repo create .tran -d "My tran config - $username" --private -y
 		git add .
 		git commit -m "new .tran repo"
 		git branch -M trunk
@@ -36,20 +34,15 @@ func Start_w() string {
 func Start_ml() string {
 	return `
 		username=$(tran auth get-username)
-		$HOME/.config/tran
+		cd $HOME/.config/tran
 		git init
-		echo "# My tran config - $username" >> $HOME/.tran/README.md
-		tran repo create .tran -d "My tran config - $username" --private -y
+		tran gh-repo create .tran -d "My tran config - $username" --private -y
 		git add .
 		git commit -m "new .tran repo"
 		git branch -M trunk
 		git remote add origin https://github.com/$username/.tran
 		git push -u origin trunk
 	`
-}
-
-func StartEX() string {
-	return "echo '\n## Clone\n\n```\ntran sync clone\n```\n\n**for more about sync command, run `tran sync -h`**' >> $HOME/.config/tran/README.md"
 }
 
 func Push_w() string {
@@ -93,9 +86,27 @@ func Pull_ml() string {
 	`
 }
 
-func Clone() string {
+func Clone_w() string {
 	return `
-		tran gh-repo clone .tran $HOME/.config/tran
+		$TRANDIR = $HOME\.config\tran
+
+		if (Test-Path -path $TRANDIR) {
+			Remove-Item $TRANDIR -Recurse -Force
+		} else {
+			tran gh-repo clone .tran $TRANDIR
+		}
+	`
+}
+
+func Clone_ml() string {
+	return `
+		TRANDIR=$HOME/.config/tran
+
+		if [ -d $TRANDIR ]; then
+			rm -rf $TRANDIR
+		else
+			tran gh-repo clone .tran $TRANDIR
+		fi
 	`
 }
 

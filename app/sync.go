@@ -25,10 +25,10 @@ var (
 		Short: "Start sync your tran config.",
 		Run: func(cmd *cobra.Command, args []string) {
 			if username != ":username" {
-				exCmd := constants.StartEX()
+				exCmd := "echo '# My tran config - " + username + "\n\n## Clone\n\n```\ntran sync clone\n```\n\n**for more about sync command, run `tran sync -h`**' >> $HOME/.config/tran/README.md"
 
-				gosh.RunMulti(constants.Start_ml(), constants.Start_w())
 				gosh.Run(exCmd)
+				gosh.RunMulti(constants.Start_ml(), constants.Start_w())
 			} else {
 				utils.AuthMessage()
 			}
@@ -41,9 +41,7 @@ var (
 		Short: CloneHelp(),
 		Run: func(cmd *cobra.Command, args []string) {
 			if username != ":username" {
-				cloneCmd := constants.Clone()
-
-				gosh.Run(cloneCmd)
+				gosh.RunMulti(constants.Clone_ml(), constants.Clone_w())
 				gosh.RunMulti(constants.Clone_check_ml(), constants.Clone_check_w())
 			} else {
 				utils.AuthMessage()
@@ -77,13 +75,13 @@ var (
 		},
 	}
 
-	FetchClone = &cobra.Command{
+	FetchX = &cobra.Command{
 		Use:   "fetchx",
 		Short: "Special command for windows",
 		Run: func(cmd *cobra.Command, args []string) {
 			if username != ":username" {
 				if runtime.GOOS == "windows" {
-					gosh.PowershellCommand(constants.Clone())
+					gosh.PowershellCommand(constants.Clone_w())
 				} else {
 					fmt.Println("This command isn't avaliable for this platform")
 				}
@@ -105,11 +103,13 @@ func Sync() *cobra.Command {
 		`),
 	}
 
-	cmd.AddCommand(NewCmdStart)
-	cmd.AddCommand(NewCmdClone)
-	cmd.AddCommand(NewCmdPush)
-	cmd.AddCommand(NewCmdPull)
-	cmd.AddCommand(FetchClone)
+	cmd.AddCommand(
+		NewCmdStart,
+		NewCmdClone,
+		NewCmdPush,
+		NewCmdPull,
+		FetchX,
+	)
 
 	return cmd
 }

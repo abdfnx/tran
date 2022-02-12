@@ -2,13 +2,13 @@ package app
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/abdfnx/gh/api"
+	"github.com/abdfnx/gh/context"
+	"github.com/abdfnx/gh/core/ghrepo"
 	"github.com/abdfnx/gh/pkg/cmdutil"
 	aCmd "github.com/abdfnx/gh/pkg/cmd/auth"
-	cCmd "github.com/abdfnx/gh/pkg/cmd/gh-config"
 	rCmd "github.com/abdfnx/gh/pkg/cmd/gh-repo"
-	"github.com/abdfnx/gh/context"
-	"github.com/abdfnx/gh/api"
-	"github.com/abdfnx/gh/core/ghrepo"
+	cCmd "github.com/abdfnx/gh/pkg/cmd/gh-config"
 )
 
 func Auth(f *cmdutil.Factory) *cobra.Command {

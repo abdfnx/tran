@@ -28,6 +28,10 @@ tasks:
     cmds:
       - sudo mv tran /usr/local/bin
 
+  remove:
+    cmds:
+      - sudo rm -rf /usr/local/bin/tran
+
   tran-container:
     deps: [ just-build-tran-container, build-tran-container, build-tran-container-with-cache ]
 
