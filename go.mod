@@ -18,7 +18,7 @@ require (
 	github.com/david-tomson/tran-git v0.0.3
 	github.com/disintegration/imaging v1.6.2
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
-	github.com/gorilla/websocket v1.4.2
+	github.com/gorilla/websocket v1.5.0
 	github.com/klauspost/pgzip v1.2.5
 	github.com/ledongthuc/pdf v0.0.0-20210621053716-e28cb8259002
 	github.com/lucasb-eyer/go-colorful v1.2.0
