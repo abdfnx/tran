@@ -34,7 +34,7 @@ func Start_w() string {
 func Start_ml() string {
 	return `
 		username=$(tran auth get-username)
-		cd $HOME/.config/tran
+		cd ~/.config/tran
 		git init
 		tran gh-repo create .tran -d "My tran config - $username" --private -y
 		git add .
@@ -61,7 +61,7 @@ func Push_w() string {
 
 func Push_ml() string {
 	return `
-		cd $HOME/.config/tran
+		cd ~/.config/tran
 		git add .
 		git commit -m "new tran config"
 		git push
@@ -81,7 +81,7 @@ func Pull_w() string {
 
 func Pull_ml() string {
 	return `
-		cd $HOME/.config/tran
+		cd ~/.config/tran
 		git pull
 	`
 }
@@ -100,7 +100,7 @@ func Clone_w() string {
 
 func Clone_ml() string {
 	return `
-		TRANDIR=$HOME/.config/tran
+		TRANDIR=~/.config/tran
 
 		if [ -d $TRANDIR ]; then
 			rm -rf $TRANDIR
