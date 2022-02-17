@@ -2,8 +2,13 @@
   <img src="https://raw.githubusercontent.com/abdfnx/tran/main/.github/assets/logo.svg" height="120px" />
 </p>
 
-![computer 1](https://user-images.githubusercontent.com/64256993/152999023-fbbe04aa-a4b5-449c-b589-27e1169cf851.gif)
-![computer 2](https://user-images.githubusercontent.com/64256993/153002664-9c3db89e-5c71-4555-afa0-3866e37f5339.gif)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/64256993/152999023-fbbe04aa-a4b5-449c-b589-27e1169cf851.gif" />
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/64256993/153002664-9c3db89e-5c71-4555-afa0-3866e37f5339.gif" />
+</p>
 
 > 🖥️ Securely transfer and send anything between computers with TUI.
 

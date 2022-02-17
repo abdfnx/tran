@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.2
 	github.com/MakeNowJust/heredoc v1.0.0
-	github.com/abdfnx/gh v0.1.41
+	github.com/abdfnx/gh v0.1.5
 	github.com/abdfnx/gosh v0.3.5
 	github.com/abdfnx/looker v0.1.0
 	github.com/abdfnx/resto v0.1.6
@@ -44,6 +44,7 @@ require (
 	github.com/cli/browser v1.1.0 // indirect
 	github.com/cli/oauth v0.8.0 // indirect
 	github.com/cli/safeexec v1.0.0 // indirect
+	github.com/cli/shurcooL-graphql v0.0.1 // indirect
 	github.com/containerd/console v1.0.3 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dlclark/regexp2 v1.4.0 // indirect
@@ -87,5 +88,3 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
-
-replace github.com/shurcooL/graphql => github.com/cli/shurcooL-graphql v0.0.0-20200707151639-0f7232a2bf7e

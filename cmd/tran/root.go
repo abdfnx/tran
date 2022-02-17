@@ -11,6 +11,7 @@ import (
 	"github.com/abdfnx/tran/internal/tui"
 	"github.com/abdfnx/tran/internal/config"
 	tea "github.com/charmbracelet/bubbletea"
+	configCmd "github.com/abdfnx/tran/app/config"
 )
 
 // Execute start the CLI
@@ -107,6 +108,7 @@ func Execute(f *factory.Factory, version string, buildDate string) *cobra.Comman
 		app.NewGHConfigCmd,
 		app.NewGHRepoCmd,
 		app.Sync(),
+		configCmd.NewConfigCmd(),
 		versionCmd,
 	)
 
