@@ -139,3 +139,8 @@ thanks to [**@ZinoKader**](https://github.com/ZinoKader) for his awesome repo [`
 ### License
 
 tran is licensed under the terms of [MIT](https://github.com/abdfnx/tran/blob/main/LICENSE) license.
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/abdfnx/tran.svg)](https://starchart.cc/abdfnx/tran)
