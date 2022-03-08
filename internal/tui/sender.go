@@ -163,7 +163,7 @@ func (m senderUIModel) View() string {
 			return "\n" +
 				constants.PadText + constants.InfoStyle(fileInfoText) + "\n\n" +
 				constants.PadText + "On the other computer, press " + constants.HelpStyle("`ctrl+r`") + " to enable receive mode and then enter the password:" + "\n\n" +
-				constants.PadText + "This is the passowrd: " + constants.BoldText(m.password) + "\n\n"
+				constants.PadText + "This is the password: " + constants.BoldText(m.password) + "\n\n"
 
 		case showSendingProgress:
 			return "\n" +
