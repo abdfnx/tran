@@ -19,6 +19,7 @@ jobs:
 
     - name: Build
       run: |
+        go mod tidy -compat=1.17
         go run ./scripts/date.go >> date.txt
         go build -ldflags "-X main.version=$(git describe --abbrev=0 --tags) -X main.buildDate=$(cat date.txt)" -o tran
 
