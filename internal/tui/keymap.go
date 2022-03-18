@@ -28,7 +28,7 @@ type KeyMap struct {
 // DefaultKeyMap returns a set of default keybindings.
 var Keys = KeyMap{
 	Quit: key.NewBinding(
-		key.WithKeys("q", "ctrl+q"),
+		key.WithKeys("q", "ctrl+c", "ctrl+q"),
 	),
 	Down: key.NewBinding(
 		key.WithKeys("down"),

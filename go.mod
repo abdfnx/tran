@@ -1,4 +1,4 @@
-module github.com/abdfnx/tran
+module github.com/scmn-dev/tran
 
 go 1.17
 
@@ -9,6 +9,7 @@ require (
 	github.com/abdfnx/gosh v0.3.5
 	github.com/abdfnx/looker v0.1.0
 	github.com/abdfnx/resto v0.1.6
+	github.com/abdfnx/tran v0.1.3
 	github.com/alecthomas/chroma v0.10.0
 	github.com/briandowns/spinner v1.18.1
 	github.com/charmbracelet/bubbles v0.10.3
