@@ -1,15 +1,15 @@
 package tranx
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"time"
-	"encoding/json"
 
 	"github.com/gorilla/websocket"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/constants"
-	"github.com/abdfnx/tran/models/protocol"
+	"github.com/scmn-dev/tran/constants"
+	"github.com/scmn-dev/tran/models/protocol"
+	"github.com/scmn-dev/tran/tools"
 )
 
 // handleEstablishSender returns a websocket handler that communicates with the sender.

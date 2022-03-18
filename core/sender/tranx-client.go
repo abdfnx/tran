@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/schollz/pake/v3"
 	"github.com/gorilla/websocket"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/models"
-	"github.com/abdfnx/tran/core/crypt"
-	"github.com/abdfnx/tran/models/protocol"
+	"github.com/schollz/pake/v3"
+	"github.com/scmn-dev/tran/core/crypt"
+	"github.com/scmn-dev/tran/models"
+	"github.com/scmn-dev/tran/models/protocol"
+	"github.com/scmn-dev/tran/tools"
 )
 
 // ConnectToTranx, establishes the connection with the tranx server.

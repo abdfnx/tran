@@ -20,7 +20,7 @@ rmOldFiles() {
 
 v=$(curl --silent "https://api.github.com/repos/abdfnx/tran/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
-releases_api_url=https://github.com/abdfnx/tran/releases/download
+releases_api_url=https://github.com/scmn-dev/tran/releases/download
 
 successInstall() {
     echo "🙏 Thanks for installing Tran! If this is your first time using the CLI, be sure to run `tran --help` first."

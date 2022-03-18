@@ -1,8 +1,8 @@
 package receiver
 
 import (
-	"github.com/abdfnx/tran/models"
-	"github.com/abdfnx/tran/core/crypt"
+	"github.com/scmn-dev/tran/core/crypt"
+	"github.com/scmn-dev/tran/models"
 )
 
 type Receiver struct {

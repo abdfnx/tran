@@ -1,19 +1,19 @@
 package tui
 
 import (
-	"os"
 	"image"
-	"io/fs"
-	_ "image/png"
 	_ "image/jpeg"
+	_ "image/png"
+	"io/fs"
+	"os"
 	"path/filepath"
 
-	"github.com/abdfnx/tran/dfs"
-	"github.com/abdfnx/tran/models"
-	"github.com/abdfnx/tran/renderer"
-	"github.com/abdfnx/tran/constants"
-	"github.com/charmbracelet/lipgloss"
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
+	"github.com/scmn-dev/tran/constants"
+	"github.com/scmn-dev/tran/dfs"
+	"github.com/scmn-dev/tran/models"
+	"github.com/scmn-dev/tran/renderer"
 )
 
 type updateDirectoryListingMsg []fs.DirEntry

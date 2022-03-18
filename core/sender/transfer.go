@@ -1,16 +1,16 @@
 package sender
 
 import (
-	"io"
-	"fmt"
-	"log"
 	"bufio"
+	"fmt"
+	"io"
+	"log"
 	"syscall"
 
 	"github.com/gorilla/websocket"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/constants"
-	"github.com/abdfnx/tran/models/protocol"
+	"github.com/scmn-dev/tran/constants"
+	"github.com/scmn-dev/tran/models/protocol"
+	"github.com/scmn-dev/tran/tools"
 )
 
 // Transfer is the file transfer sequence, can be via relay or tranx.

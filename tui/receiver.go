@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/abdfnx/tran/tools"
-	"github.com/muesli/reflow/indent"
-	"github.com/abdfnx/tran/constants"
-	"github.com/muesli/reflow/wordwrap"
-	"github.com/charmbracelet/lipgloss"
-	tea "github.com/charmbracelet/bubbletea"
-	"github.com/charmbracelet/bubbles/spinner"
 	"github.com/charmbracelet/bubbles/progress"
+	"github.com/charmbracelet/bubbles/spinner"
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
+	"github.com/muesli/reflow/indent"
+	"github.com/muesli/reflow/wordwrap"
+	"github.com/scmn-dev/tran/constants"
+	"github.com/scmn-dev/tran/tools"
 )
 
 type uiState int

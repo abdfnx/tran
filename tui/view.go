@@ -5,13 +5,13 @@ import (
 	"io/fs"
 	"strings"
 
-	"github.com/abdfnx/tran/dfs"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/models"
-	"github.com/abdfnx/tran/renderer"
-	"github.com/abdfnx/tran/constants"
 	"github.com/charmbracelet/lipgloss"
 	"github.com/muesli/reflow/truncate"
+	"github.com/scmn-dev/tran/constants"
+	"github.com/scmn-dev/tran/dfs"
+	"github.com/scmn-dev/tran/models"
+	"github.com/scmn-dev/tran/renderer"
+	"github.com/scmn-dev/tran/tools"
 )
 
 // statusBarView returns the status bar.

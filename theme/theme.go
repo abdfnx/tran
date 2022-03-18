@@ -1,8 +1,8 @@
 package theme
 
 import (
-	"github.com/abdfnx/tran/constants"
 	"github.com/charmbracelet/lipgloss"
+	"github.com/scmn-dev/tran/constants"
 )
 
 type Theme struct {
