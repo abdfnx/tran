@@ -1,16 +1,16 @@
 package tools
 
 import (
-	"archive/tar"
-	"bufio"
-	"fmt"
 	"io"
 	"os"
-	"path/filepath"
+	"fmt"
+	"bufio"
 	"strings"
+	"archive/tar"
+	"path/filepath"
 
 	"github.com/klauspost/pgzip"
-	"github.com/scmn-dev/tran/constants"
+	"github.com/abdfnx/tran/constants"
 )
 
 func ReadFiles(fileNames []string) ([]*os.File, error) {

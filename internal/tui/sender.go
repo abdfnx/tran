@@ -5,6 +5,8 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/abdfnx/tran/constants"
+	"github.com/abdfnx/tran/tools"
 	"github.com/charmbracelet/bubbles/progress"
 	"github.com/charmbracelet/bubbles/spinner"
 	tea "github.com/charmbracelet/bubbletea"
@@ -12,8 +14,6 @@ import (
 	"github.com/muesli/reflow/indent"
 	"github.com/muesli/reflow/wordwrap"
 	"github.com/muesli/termenv"
-	"github.com/scmn-dev/tran/constants"
-	"github.com/scmn-dev/tran/tools"
 )
 
 // ui state flows from the top down

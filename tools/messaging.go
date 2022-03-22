@@ -1,12 +1,12 @@
 package tools
 
 import (
-	"encoding/json"
 	"fmt"
+	"encoding/json"
 
 	"github.com/gorilla/websocket"
-	"github.com/scmn-dev/tran/core/crypt"
-	"github.com/scmn-dev/tran/models/protocol"
+	"github.com/abdfnx/tran/core/crypt"
+	"github.com/abdfnx/tran/models/protocol"
 )
 
 func ReadTranxMessage(wsConn *websocket.Conn, expected protocol.TranxMessageType) (protocol.TranxMessage, error) {

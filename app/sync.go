@@ -3,16 +3,16 @@ package app
 import (
 	"fmt"
 	"log"
-	"runtime"
 	"time"
+	"runtime"
 
-	"github.com/MakeNowJust/heredoc"
-	"github.com/abdfnx/gh/utils"
 	"github.com/abdfnx/gosh"
-	"github.com/briandowns/spinner"
-	git_config "github.com/david-tomson/tran-git"
-	"github.com/scmn-dev/tran/constants"
 	"github.com/spf13/cobra"
+	"github.com/abdfnx/gh/utils"
+	"github.com/briandowns/spinner"
+	"github.com/MakeNowJust/heredoc"
+	"github.com/abdfnx/tran/constants"
+	git_config "github.com/david-tomson/tran-git"
 )
 
 var username = git_config.GitConfig()

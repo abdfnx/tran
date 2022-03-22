@@ -1,6 +1,6 @@
 package models
 
-import "github.com/scmn-dev/tran/ios"
+import "github.com/abdfnx/tran/ios"
 
 type TranOptions struct {
 	TranxAddress string

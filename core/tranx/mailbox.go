@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/gorilla/websocket"
-	"github.com/scmn-dev/tran/models/protocol"
+	"github.com/abdfnx/tran/models/protocol"
 )
 
 // Mailbox is a data structure that links together a sender and a receiver client.

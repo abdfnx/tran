@@ -3,11 +3,11 @@ package tui
 import (
 	"fmt"
 	"sort"
-	"strings"
 	"time"
+	"strings"
 
+	"github.com/abdfnx/tran/constants"
 	"github.com/charmbracelet/bubbles/spinner"
-	"github.com/scmn-dev/tran/constants"
 )
 
 type UIUpdate struct {

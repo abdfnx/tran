@@ -3,12 +3,12 @@ package app
 import (
 	"log"
 
-	"github.com/abdfnx/gh/pkg/cmd/factory"
-	"github.com/scmn-dev/tran/constants"
-	"github.com/scmn-dev/tran/models"
-	"github.com/scmn-dev/tran/tools"
-	"github.com/scmn-dev/tran/tui"
 	"github.com/spf13/cobra"
+	"github.com/abdfnx/tran/tools"
+	"github.com/abdfnx/tran/models"
+	"github.com/abdfnx/tran/constants"
+	"github.com/abdfnx/tran/internal/tui"
+	"github.com/abdfnx/gh/pkg/cmd/factory"
 )
 
 var NewSendCmd = &cobra.Command{

@@ -1,15 +1,15 @@
 package config
 
 import (
-	"bytes"
 	"fmt"
+	"bytes"
 	"io/ioutil"
 	"path/filepath"
 
 	"github.com/mgutz/ansi"
-	"github.com/scmn-dev/tran/dfs"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	"github.com/abdfnx/tran/dfs"
 )
 
 var (

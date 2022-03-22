@@ -1,14 +1,14 @@
 package tools
 
 import (
-	"crypto/sha256"
-	"encoding/hex"
 	"fmt"
-	"math/rand"
 	"regexp"
+	"math/rand"
+	"encoding/hex"
+	"crypto/sha256"
 
-	"github.com/scmn-dev/tran/data"
-	"github.com/scmn-dev/tran/models"
+	"github.com/abdfnx/tran/data"
+	"github.com/abdfnx/tran/models"
 )
 
 const passwordLength = 4

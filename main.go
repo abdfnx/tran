@@ -1,19 +1,19 @@
 package main
 
 import (
-	"errors"
-	"fmt"
 	"os"
+	"fmt"
+	"errors"
 	"runtime"
 
-	surveyCore "github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
 	"github.com/mgutz/ansi"
-	"github.com/scmn-dev/tran/app/checker"
-	"github.com/scmn-dev/tran/cmd/factory"
-	"github.com/scmn-dev/tran/cmd/tran"
-	"github.com/scmn-dev/tran/tools"
 	"github.com/spf13/cobra"
+	"github.com/abdfnx/tran/tools"
+	"github.com/abdfnx/tran/cmd/tran"
+	"github.com/abdfnx/tran/cmd/factory"
+	"github.com/abdfnx/tran/app/checker"
+	"github.com/AlecAivazis/survey/v2/terminal"
+	surveyCore "github.com/AlecAivazis/survey/v2/core"
 )
 
 var (

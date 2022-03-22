@@ -1,20 +1,20 @@
 package tui
 
 import (
-	"errors"
 	"os"
+	"errors"
 	"os/exec"
 	"path/filepath"
 
-	"github.com/charmbracelet/bubbles/key"
-	"github.com/charmbracelet/bubbles/textinput"
-	tea "github.com/charmbracelet/bubbletea"
+	"github.com/muesli/termenv"
+	"github.com/abdfnx/tran/dfs"
+	"github.com/abdfnx/tran/constants"
 	"github.com/charmbracelet/glamour"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/muesli/termenv"
-	"github.com/scmn-dev/tran/config"
-	"github.com/scmn-dev/tran/constants"
-	"github.com/scmn-dev/tran/dfs"
+	"github.com/charmbracelet/bubbles/key"
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/abdfnx/tran/internal/config"
+	"github.com/charmbracelet/bubbles/textinput"
 )
 
 // checkPrimaryViewportBounds handles wrapping of the filetree and scrolling of the viewport.

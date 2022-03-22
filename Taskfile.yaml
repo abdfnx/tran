@@ -20,7 +20,7 @@ tasks:
   build:
     cmds:
       - task: set-tag-and-date
-      - go mod tidy -compat=1.17
+      - go mod tidy --compat="1.17"
       - go build -ldflags "-X main.version=$(cat tag.txt) -X main.buildDate=$(cat date.txt)" -o tran
 
   install:

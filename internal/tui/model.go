@@ -4,14 +4,14 @@ import (
 	"image"
 	"io/fs"
 
-	"github.com/charmbracelet/bubbles/spinner"
-	"github.com/charmbracelet/bubbles/textinput"
-	"github.com/charmbracelet/bubbles/viewport"
-	tea "github.com/charmbracelet/bubbletea"
+	"github.com/abdfnx/tran/constants"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/scmn-dev/tran/config"
-	"github.com/scmn-dev/tran/constants"
-	"github.com/scmn-dev/tran/theme"
+	"github.com/abdfnx/tran/internal/theme"
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/abdfnx/tran/internal/config"
+	"github.com/charmbracelet/bubbles/spinner"
+	"github.com/charmbracelet/bubbles/viewport"
+	"github.com/charmbracelet/bubbles/textinput"
 )
 
 // Bubble represents the state of the UI.

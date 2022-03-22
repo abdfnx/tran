@@ -1,14 +1,14 @@
 package tran
 
 import (
-	"bytes"
 	"fmt"
+	"bytes"
 	"strings"
 
-	"github.com/scmn-dev/tran/ios"
-	"github.com/scmn-dev/tran/tools"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
+	"github.com/abdfnx/tran/ios"
+	"github.com/abdfnx/tran/tools"
 )
 
 func rootUsageFunc(command *cobra.Command) error {

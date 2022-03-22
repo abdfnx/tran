@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/abdfnx/looker"
 	"github.com/mgutz/ansi"
-	"github.com/scmn-dev/tran/api"
-	"github.com/scmn-dev/tran/cmd/factory"
-	"github.com/scmn-dev/tran/config"
+	"github.com/abdfnx/looker"
+	"github.com/abdfnx/tran/api"
+	"github.com/abdfnx/tran/cmd/factory"
+	"github.com/abdfnx/tran/internal/config"
 )
 
 func Check(buildVersion string) {

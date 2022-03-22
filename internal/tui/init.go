@@ -1,16 +1,16 @@
 package tui
 
 import (
-	"log"
 	"os"
-	"path/filepath"
+	"log"
 	"strings"
+	"path/filepath"
 
+	"github.com/spf13/viper"
+	"github.com/abdfnx/tran/dfs"
+	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/bubbles/spinner"
 	"github.com/charmbracelet/bubbles/textinput"
-	tea "github.com/charmbracelet/bubbletea"
-	"github.com/scmn-dev/tran/dfs"
-	"github.com/spf13/viper"
 )
 
 // Init initializes the UI and sets up initial data.
