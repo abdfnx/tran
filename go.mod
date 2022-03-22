@@ -1,4 +1,4 @@
-module github.com/abdfnx/tran
+module github.com/scmn-dev/tran
 
 go 1.17
 

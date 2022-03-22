@@ -4,7 +4,7 @@ $tag = (Invoke-WebRequest -Uri $release_url -UseBasicParsing | ConvertFrom-Json)
 $loc = "$HOME\AppData\Local\tran"
 $url = ""
 $arch = $env:PROCESSOR_ARCHITECTURE
-$releases_api_url = "https://github.com/abdfnx/tran/releases/download/$tag/tran_windows_${tag}"
+$releases_api_url = "https://github.com/scmn-dev/tran/releases/download/$tag/tran_windows_${tag}"
 
 if ($arch -eq "AMD64") {
     $url = "${releases_api_url}_amd64.zip"

@@ -1,18 +1,18 @@
 package tui
 
 import (
-	"os"
 	"fmt"
 	"math"
+	"os"
 	"time"
 
-	"github.com/gorilla/websocket"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/models"
-	"github.com/abdfnx/tran/constants"
-	"github.com/abdfnx/tran/core/receiver"
-	"github.com/abdfnx/tran/models/protocol"
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/gorilla/websocket"
+	"github.com/scmn-dev/tran/constants"
+	"github.com/scmn-dev/tran/core/receiver"
+	"github.com/scmn-dev/tran/models"
+	"github.com/scmn-dev/tran/models/protocol"
+	"github.com/scmn-dev/tran/tools"
 )
 
 // HandleReceiveCommand is the receive application.

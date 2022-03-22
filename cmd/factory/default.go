@@ -1,7 +1,7 @@
 package factory
 
 import (
-	"github.com/abdfnx/tran/ios"
+	"github.com/scmn-dev/tran/ios"
 )
 
 type Factory struct {

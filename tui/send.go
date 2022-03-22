@@ -1,19 +1,19 @@
 package tui
 
 import (
-	"os"
-	"fmt"
-	"net"
-	"math"
-	"time"
 	"errors"
+	"fmt"
+	"math"
+	"net"
+	"os"
+	"time"
 
-	"github.com/gorilla/websocket"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/models"
-	"github.com/abdfnx/tran/constants"
-	"github.com/abdfnx/tran/core/sender"
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/gorilla/websocket"
+	"github.com/scmn-dev/tran/constants"
+	"github.com/scmn-dev/tran/core/sender"
+	"github.com/scmn-dev/tran/models"
+	"github.com/scmn-dev/tran/tools"
 )
 
 func HandleSendCommand(programOptions models.TranOptions, fileNames []string) {

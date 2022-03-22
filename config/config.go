@@ -1,14 +1,14 @@
 package config
 
 import (
-	"os"
 	"log"
-	"runtime"
+	"os"
 	"path/filepath"
+	"runtime"
 
+	"github.com/scmn-dev/tran/dfs"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
-	"github.com/abdfnx/tran/dfs"
 )
 
 // TranConfig struct represents the config for the config.

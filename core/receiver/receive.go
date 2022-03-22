@@ -1,12 +1,12 @@
 package receiver
 
 import (
-	"io"
 	"encoding/json"
+	"io"
 
 	"github.com/gorilla/websocket"
-	"github.com/abdfnx/tran/tools"
-	"github.com/abdfnx/tran/models/protocol"
+	"github.com/scmn-dev/tran/models/protocol"
+	"github.com/scmn-dev/tran/tools"
 )
 
 func (r *Receiver) Receive(wsConn *websocket.Conn, buffer io.Writer) error {

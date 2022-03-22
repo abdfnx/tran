@@ -1,18 +1,18 @@
 package sender
 
 import (
-	"os"
-	"io"
 	"fmt"
+	"io"
 	"net"
-	"time"
-	"syscall"
 	"net/http"
+	"os"
 	"os/signal"
+	"syscall"
+	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/abdfnx/tran/models"
-	"github.com/abdfnx/tran/core/crypt"
+	"github.com/scmn-dev/tran/core/crypt"
+	"github.com/scmn-dev/tran/models"
 )
 
 // Sender represents the sender client, handles tranx communication and file transfer.

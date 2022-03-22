@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/spf13/cobra"
-	"github.com/abdfnx/tran/app"
 	"github.com/MakeNowJust/heredoc"
-	"github.com/abdfnx/tran/cmd/factory"
-	"github.com/abdfnx/tran/internal/tui"
-	"github.com/abdfnx/tran/internal/config"
 	tea "github.com/charmbracelet/bubbletea"
-	configCmd "github.com/abdfnx/tran/app/config"
+	"github.com/scmn-dev/tran/app"
+	configCmd "github.com/scmn-dev/tran/app/config"
+	"github.com/scmn-dev/tran/cmd/factory"
+	"github.com/scmn-dev/tran/config"
+	"github.com/scmn-dev/tran/tui"
+	"github.com/spf13/cobra"
 )
 
 // Execute start the CLI
@@ -45,7 +45,7 @@ func Execute(f *factory.Factory, version string, buildDate string) *cobra.Comman
 		`),
 		Annotations: map[string]string{
 			"help:tellus": heredoc.Doc(`
-				Open an issue at https://github.com/abdfnx/tran/issues
+				Open an issue at https://github.com/scmn-dev/tran/issues
 			`),
 		},
 		RunE: func(cmd *cobra.Command, args []string) error {
