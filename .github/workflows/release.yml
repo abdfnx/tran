@@ -22,29 +22,29 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Set up `Go`
+      - name: Set up Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.17
+          go-version: 1.18
 
-      - name: Setup `Node.js`
+      - name: Setup Node.js
         uses: actions/setup-node@v2.5.0
         with:
           node-version: 16
           
-      - name: Set up `GoReleaser`
+      - name: Set up GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
           install-only: true
 
-      - name: Set up `Task`
+      - name: Set up Task
         uses: arduino/setup-task@v1
 
-      - name: Set up `Tag`
+      - name: Set up Tag
         id: ghtag
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
 
-      - name: Set up `Date`
+      - name: Set up Date
         run: go run ./scripts/date.go >> date.txt
 
       - name: Build
