@@ -3,7 +3,7 @@ module github.com/abdfnx/tran
 go 1.18
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.3.4
+	github.com/AlecAivazis/survey/v2 v2.3.5
 	github.com/MakeNowJust/heredoc v1.0.0
 	github.com/abdfnx/gh v0.1.5
 	github.com/abdfnx/gosh v0.3.5
