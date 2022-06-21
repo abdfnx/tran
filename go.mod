@@ -28,7 +28,7 @@ require (
 	github.com/muesli/reflow v0.3.0
 	github.com/muesli/termenv v0.11.1-0.20220212125758-44cd13922739
 	github.com/schollz/pake/v3 v3.0.4
-	github.com/spf13/cobra v1.4.0
+	github.com/spf13/cobra v1.5.0
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.12.0
 	github.com/tidwall/gjson v1.14.1
