@@ -64,7 +64,9 @@ func (b *Bubble) handleKeys(msg tea.KeyMsg) tea.Cmd {
 
 	switch {
 		case key.Matches(msg, b.keyMap.Quit):
-			return tea.Quit
+			if !b.showCommandInput {
+				return tea.Quit
+			}
 
 		case key.Matches(msg, b.keyMap.Down):
 			if b.activeBox == constants.PrimaryBoxActive && !b.showCommandInput && !b.showBoxSpinner {
