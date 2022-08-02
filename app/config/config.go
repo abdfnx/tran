@@ -14,7 +14,7 @@ import (
 
 var (
 	homeDir, _ = dfs.GetHomeDirectory()
-	tranConfigPath = filepath.Join(homeDir, ".config", "tran", "tran.yml")
+	tranConfigPath = filepath.Join(homeDir, ".tran", "tran.yml")
 	tranConfig, err = ioutil.ReadFile(tranConfigPath)
 )
 

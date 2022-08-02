@@ -82,7 +82,7 @@ tran sync start
 
 ### Tran Config file
 
-> tran config file is located at `~/.config/tran/tran.yml` | `$HOME/tran.yml`
+> tran config file is located at `~/.tran/tran.yml`
 
 ```yml
 config:

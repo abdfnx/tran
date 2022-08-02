@@ -34,7 +34,7 @@ func defualtEditor() string {
 }
 
 // LoadConfig loads a users config and creates the config if it does not exist
-// located at `~/.config/tran.yml`
+// located at `~/.tran/tran.yml`
 func LoadConfig(startDir *pflag.Flag) {
 	var err error
 
@@ -44,12 +44,17 @@ func LoadConfig(startDir *pflag.Flag) {
 		log.Fatal(err)
 	}
 
-	err = dfs.CreateDirectory(filepath.Join(homeDir, ".config", "tran"))
+	err = dfs.CreateDirectory(filepath.Join(homeDir, ".tran"))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	viper.AddConfigPath("$HOME/.config/tran")
+	viper.AddConfigPath("$HOME/.tran")
+
+	if runtime.GOOS == "windows" {
+		viper.AddConfigPath(`$USERPROFILE\\.tran`)
+	}
+
 	viper.SetConfigName("tran")
 	viper.SetConfigType("yml")
 

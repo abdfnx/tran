@@ -2,7 +2,7 @@ package constants
 
 func Fetch_w() string {
 	return `
-		Remove-Item $HOME\.config\tran -Recurse -Force
+		Remove-Item $HOME\.tran -Recurse -Force
 		tran sync fetchx
 		Write-Host "Fetched Successfully"
 	`
@@ -10,7 +10,7 @@ func Fetch_w() string {
 
 func Fetch_ml() string {
 	return `
-		cd $HOME/.config/tran
+		cd $HOME/.tran
 		git pull
 		echo "Fetched Successfully ✅"
 	`
@@ -19,7 +19,7 @@ func Fetch_ml() string {
 func Start_w() string {
 	return `
 		$username = tran auth get-username
-		cd $HOME\.config\tran
+		cd $HOME\.tran
 		git init
 		tran gh-repo create .tran -d "My tran config - $username" --private -y
 		git add .
@@ -34,7 +34,7 @@ func Start_w() string {
 func Start_ml() string {
 	return `
 		username=$(tran auth get-username)
-		cd ~/.config/tran
+		cd ~/.tran
 		git init
 		tran gh-repo create .tran -d "My tran config - $username" --private -y
 		git add .
@@ -48,7 +48,7 @@ func Start_ml() string {
 func Push_w() string {
 	return `
 		$lastDir = pwd
-		cd $HOME\.config\tran
+		cd $HOME\.tran
 		if (Test-Path -path .git) {
 			git add .
 			git commit -m "new change"
@@ -61,7 +61,7 @@ func Push_w() string {
 
 func Push_ml() string {
 	return `
-		cd ~/.config/tran
+		cd ~/.tran
 		git add .
 		git commit -m "new tran config"
 		git push
@@ -71,7 +71,7 @@ func Push_ml() string {
 func Pull_w() string {
 	return `
 		$lastDir = pwd
-		cd $HOME\.config\tran
+		cd $HOME\.tran
 
 		git pull
 
@@ -81,14 +81,14 @@ func Pull_w() string {
 
 func Pull_ml() string {
 	return `
-		cd ~/.config/tran
+		cd ~/.tran
 		git pull
 	`
 }
 
 func Clone_w() string {
 	return `
-		$TRANDIR = $HOME\.config\tran
+		$TRANDIR = $HOME\.tran
 
 		if (Test-Path -path $TRANDIR) {
 			Remove-Item $TRANDIR -Recurse -Force
@@ -100,7 +100,7 @@ func Clone_w() string {
 
 func Clone_ml() string {
 	return `
-		TRANDIR=~/.config/tran
+		TRANDIR=~/.tran
 
 		if [ -d $TRANDIR ]; then
 			rm -rf $TRANDIR
@@ -112,12 +112,12 @@ func Clone_ml() string {
 
 func Clone_check_w() string {
 	return `
-		if (Test-Path -path $HOME\.config\tran) {
+		if (Test-Path -path $HOME\.tran) {
 			Write-Host "tran repo cloned successfully"
 		}
 	`
 }
 
 func Clone_check_ml() string {
-	return `if [ -d $HOME/.config/tran ]; then echo "tran repo cloned successfully ✅"; fi`
+	return `if [ -d $HOME/.tran ]; then echo "tran repo cloned successfully ✅"; fi`
 }

@@ -25,7 +25,7 @@ var (
 		Short: "Start sync your tran config.",
 		Run: func(cmd *cobra.Command, args []string) {
 			if username != ":username" {
-				exCmd := "echo '# My tran config - " + username + "\n\n## Clone\n\n```\ntran sync clone\n```\n\n**for more about sync command, run `tran sync -h`**' >> $HOME/.config/tran/README.md"
+				exCmd := "echo '# My tran config - " + username + "\n\n## Clone\n\n```\ntran sync clone\n```\n\n**for more about sync command, run `tran sync -h`**' >> $HOME/.tran/README.md"
 
 				gosh.Run(exCmd)
 				gosh.RunMulti(constants.Start_ml(), constants.Start_w())
@@ -134,7 +134,7 @@ func PushSync() {
 	if runtime.GOOS == "windows" {
 		err, out, errout := gosh.PowershellOutput(
 		`
-			$directoyPath = "~/.config/tran/.git"
+			$directoyPath = "~/.tran/.git"
 
 			if (Test-Path -path $directoyPath) {
 				Write-Host "Reading from .tran folder..."
@@ -158,7 +158,7 @@ func PushSync() {
 	} else {
 		err, out, errout := gosh.ShellOutput(
 		`
-			if [ -d ~/.config/tran/.git ]; then
+			if [ -d ~/.tran/.git ]; then
 				echo "📖 Reading from .tran folder..."
 			fi
 		`)
