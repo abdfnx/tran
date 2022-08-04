@@ -49,10 +49,12 @@ func LoadConfig(startDir *pflag.Flag) {
 		log.Fatal(err)
 	}
 
-	viper.AddConfigPath("$HOME/.tran")
-
+	// Windows doesn't use the $HOME env variable, 
+	// check if running on Windows and if so, use $USERPROFILE
 	if runtime.GOOS == "windows" {
 		viper.AddConfigPath(`$USERPROFILE\\.tran`)
+	} else {
+		viper.AddConfigPath("$HOME/.tran")
 	}
 
 	viper.SetConfigName("tran")
