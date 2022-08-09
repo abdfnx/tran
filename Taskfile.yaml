@@ -20,7 +20,8 @@ tasks:
   build:
     cmds:
       - task: set-tag-and-date
-      - go mod tidy -compat=1.18
+      - go get -d
+      # - go get -u
       - go build -ldflags "-X main.version=$(cat tag.txt) -X main.buildDate=$(cat date.txt)" -o tran
 
   install:
