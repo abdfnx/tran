@@ -22,8 +22,8 @@ require (
 	github.com/klauspost/pgzip v1.2.5
 	github.com/ledongthuc/pdf v0.0.0-20220302134840-0c2507a12d80
 	github.com/lucasb-eyer/go-colorful v1.2.0
-	github.com/mattn/go-colorable v0.1.12
-	github.com/mattn/go-isatty v0.0.14
+	github.com/mattn/go-colorable v0.1.13
+	github.com/mattn/go-isatty v0.0.16
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d
 	github.com/muesli/reflow v0.3.0
 	github.com/muesli/termenv v0.12.0
@@ -33,7 +33,7 @@ require (
 	github.com/spf13/viper v1.12.0
 	github.com/tidwall/gjson v1.14.2
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa
-	golang.org/x/sys v0.0.0-20220808155132-1c4a2a72c664
+	golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab
 	golang.org/x/term v0.0.0-20220722155259-a9ba230a4035
 )
 
