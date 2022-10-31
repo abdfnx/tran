@@ -6,7 +6,7 @@ require (
 	github.com/AlecAivazis/survey/v2 v2.3.6
 	github.com/MakeNowJust/heredoc v1.0.0
 	github.com/abdfnx/gh v0.1.5
-	github.com/abdfnx/gosh v0.3.9
+	github.com/abdfnx/gosh v0.4.0
 	github.com/abdfnx/looker v0.1.0
 	github.com/abdfnx/resto v0.1.6
 	github.com/alecthomas/chroma v0.10.0

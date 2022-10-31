@@ -46,8 +46,8 @@ github.com/Netflix/go-expect v0.0.0-20220104043353-73e0943537d2 h1:+vx7roKuyA63n
 github.com/Netflix/go-expect v0.0.0-20220104043353-73e0943537d2/go.mod h1:HBCaDeC1lPdgDeDbhX8XFpy1jqjK0IBG8W5K+xYqA0w=
 github.com/abdfnx/gh v0.1.5 h1:oowjekEsLVhKDNFyqZRzpNDznatXsBcngWU5ElMaNWo=
 github.com/abdfnx/gh v0.1.5/go.mod h1:oKvI2VITJHTtYisqiQ9nhEwxktUtNm7gARyJIoV5xrI=
-github.com/abdfnx/gosh v0.3.9 h1:/jZXpHeQkfGScfaLrag/cr5RwG3/kU5GQKqsBBykpQ8=
-github.com/abdfnx/gosh v0.3.9/go.mod h1:bho3zdOB7bNUOZDeI5+CSjoiF+MHmzHWqHHDAQiCq1c=
+github.com/abdfnx/gosh v0.4.0 h1:cBvmHw8yV3oXiAcORpi7Oip+MT6/5HBMOrvpn0cZNYM=
+github.com/abdfnx/gosh v0.4.0/go.mod h1:MUTJRMc7FpBb/bFnZ2U0hj48zj8284J1cS3AUiIRZ/o=
 github.com/abdfnx/looker v0.1.0 h1:tMN7E0wKIgbydAPPQ1RkppJ1bGHn+B+y9PZy7mwa+3U=
 github.com/abdfnx/looker v0.1.0/go.mod h1:QVfPHnredPBUg4R+MtEkZbMBbqrgtoaj0JHO3KYkvyE=
 github.com/abdfnx/resto v0.1.6 h1:yOM9O9bpMP4lb2ox0U7/gcFXO78P5eUZBxWuKrfdrFA=
