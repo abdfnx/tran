@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "mkdirp": "^1.0.4",
-    "rimraf": "^4.0.4",
+    "rimraf": "^4.0.7",
     "shelljs": "^0.8.5"
   }
 }

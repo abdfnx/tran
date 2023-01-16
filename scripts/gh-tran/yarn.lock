@@ -119,10 +119,10 @@ resolve@^1.1.6:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
-rimraf@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-4.0.4.tgz#8d0a91709fdc294d40f59c773f63c44e8dc878f1"
-  integrity sha512-R0hoVr9xTwemarQjoWlNt/nb5dEGVTBhVdkRmEX2zEkT8T6onH0XKiGjuaC7rNNj/gYzY2p4NVRJ3sjO1ascHQ==
+rimraf@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-4.0.7.tgz#f438c7d6a2d5e5cca1d81e3904a48ac7b053a542"
+  integrity sha512-CUEDDrZvc0swDgVdXGiv3FcYYQMpJxjvSGt85Amj6yU+MCVWurrLCeLiJDdJPHCzNJnwuebBEdcO//eP11Xa7w==
 
 shelljs@^0.8.5:
   version "0.8.5"
