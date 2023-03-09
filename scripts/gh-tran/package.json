@@ -12,8 +12,8 @@
     "github"
   ],
   "dependencies": {
-    "mkdirp": "^2.1.4",
-    "rimraf": "^4.2.0",
+    "mkdirp": "^2.1.5",
+    "rimraf": "^4.3.1",
     "shelljs": "^0.8.5"
   }
 }
