@@ -19,7 +19,7 @@ require (
 	github.com/disintegration/imaging v1.6.2
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
 	github.com/gorilla/websocket v1.5.0
-	github.com/klauspost/pgzip v1.2.5
+	github.com/klauspost/pgzip v1.2.6
 	github.com/ledongthuc/pdf v0.0.0-20220302134840-0c2507a12d80
 	github.com/lucasb-eyer/go-colorful v1.2.0
 	github.com/mattn/go-colorable v0.1.13
