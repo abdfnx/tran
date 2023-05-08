@@ -12,7 +12,7 @@ require (
 	github.com/alecthomas/chroma v0.10.0
 	github.com/briandowns/spinner v1.23.0
 	github.com/charmbracelet/bubbles v0.15.0
-	github.com/charmbracelet/bubbletea v0.23.2
+	github.com/charmbracelet/bubbletea v0.24.0
 	github.com/charmbracelet/glamour v0.6.0
 	github.com/charmbracelet/lipgloss v0.7.1
 	github.com/david-tomson/tran-git v0.0.3
@@ -46,7 +46,7 @@ require (
 	github.com/cli/oauth v0.9.0 // indirect
 	github.com/cli/safeexec v1.0.0 // indirect
 	github.com/cli/shurcooL-graphql v0.0.1 // indirect
-	github.com/containerd/console v1.0.3 // indirect
+	github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dlclark/regexp2 v1.7.0 // indirect
 	github.com/fatih/color v1.13.0 // indirect
