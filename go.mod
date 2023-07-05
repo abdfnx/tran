@@ -34,7 +34,7 @@ require (
 	github.com/tidwall/gjson v1.14.4
 	golang.org/x/crypto v0.10.0
 	golang.org/x/sys v0.10.0
-	golang.org/x/term v0.9.0
+	golang.org/x/term v0.10.0
 )
 
 require (
