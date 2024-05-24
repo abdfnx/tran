@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "tran settings",
+  "description": "tran settings\nhttps://github.com/abdfnx/tran?tab=readme-ov-file#tran-config-file",
+  "type": "object",
+  "properties": {
+    "config": {
+      "title": "config",
+      "description": "tran settings\nhttps://github.com/abdfnx/tran?tab=readme-ov-file#tran-config-file",
+      "type": "object",
+      "properties": {
+        "borderless": {
+          "title": "borderless",
+          "description": "Whether to disable borders or not\nhttps://github.com/abdfnx/tran?tab=readme-ov-file#tran-config-file",
+          "type": "boolean",
+          "default": true
+        },
+        "editor": {
+          "title": "editor",
+          "description": "An editor\nhttps://github.com/abdfnx/tran?tab=readme-ov-file#tran-config-file",
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^ ]",
+          "default": "vim"
+        },
+        "enable_mousewheel": {
+          "title": "enable mouse wheel",
+          "description": "Whether to enable a mouse wheel or not\nhttps://github.com/abdfnx/tran?tab=readme-ov-file#tran-config-file",
+          "type": "boolean",
+          "default": true
+        },
+        "show_updates": {
+          "title": "show updates",
+          "description": "Whether to show updates or not\nhttps://github.com/abdfnx/tran?tab=readme-ov-file#tran-config-file",
+          "type": "boolean",
+          "default": true
+        },
+        "start_dir": {
+          "title": "starting directory",
+          "description": "A starting directory\nhttps://github.com/abdfnx/tran?tab=readme-ov-file#tran-config-file",
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[^ ]",
+          "default": "."
+        }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
+    }
+  },
+  "minProperties": 1,
+  "additionalProperties": false
+}
