@@ -42,7 +42,7 @@ func NewSender(programOptions models.TranOptions) *Sender {
 	}
 }
 
-// WithPayload specifies the payload that will be transfered.
+// WithPayload specifies the payload that will be transferred.
 func WithPayload(s *Sender, payload io.Reader, payloadSize int64) *Sender {
 	s.payload = payload
 	s.payloadSize = payloadSize

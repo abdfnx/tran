@@ -13,7 +13,7 @@ const (
 	WaitForCloseAck
 )
 
-// UIUpdate is a struct that is continously communicated to the UI (if sender has attached a UI)
+// UIUpdate is a struct that is continuously communicated to the UI (if sender has attached a UI)
 type UIUpdate struct {
 	State    TransferState
 	Progress float32
