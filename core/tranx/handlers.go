@@ -15,7 +15,7 @@ import (
 // handleEstablishSender returns a websocket handler that communicates with the sender.
 func (s *Server) handleEstablishSender() tools.WsHandlerFunc {
 	return func(wsConn *websocket.Conn) {
-		// Bind an ID to this communication and send ot to the sender
+		// Bind an ID to this communication and send to to the sender
 		id := s.ids.Bind()
 		wsConn.WriteJSON(protocol.TranxMessage{
 			Type: protocol.TranxToSenderBind,
@@ -135,7 +135,7 @@ func (s *Server) handleEstablishSender() tools.WsHandlerFunc {
 
 		// Send the salt to the receiver.
 		mailbox.CommunicationChannel <- saltPayload.Salt
-		// Start the relay of messgaes between the sender and receiver handlers.
+		// Start the relay of messages between the sender and receiver handlers.
 		startRelay(s, wsConn, mailbox, establishPayload.Password)
 	}
 }
@@ -175,7 +175,7 @@ func (s *Server) handleEstablishReceiver() tools.WsHandlerFunc {
 			return
 		}
 
-		// this reveiver was first, reserve this mailbox for it to receive
+		// this receiver was first, reserve this mailbox for it to receive
 		mailbox.Receiver = NewClient(wsConn)
 		s.mailboxes.StoreMailbox(establishPayload.Password, mailbox)
 
@@ -271,7 +271,7 @@ func startRelay(s *Server, wsConn *websocket.Conn, mailbox *Mailbox, mailboxPass
 	}
 }
 
-// isExpected is a convience helper function that checks message types and logs errors.
+// isExpected is a convenience helper function that checks message types and logs errors.
 func isExpected(actual protocol.TranxMessageType, expected protocol.TranxMessageType) bool {
 	wasExpected := actual == expected
 

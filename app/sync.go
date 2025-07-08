@@ -83,7 +83,7 @@ var (
 				if runtime.GOOS == "windows" {
 					gosh.PowershellCommand(constants.Clone_w())
 				} else {
-					fmt.Println("This command isn't avaliable for this platform")
+					fmt.Println("This command isn't available for this platform")
 				}
 			} else {
 				utils.AuthMessage()
@@ -134,9 +134,9 @@ func PushSync() {
 	if runtime.GOOS == "windows" {
 		err, out, errout := gosh.PowershellOutput(
 		`
-			$directoyPath = "~/.tran/.git"
+			$directoryPath = "~/.tran/.git"
 
-			if (Test-Path -path $directoyPath) {
+			if (Test-Path -path $directoryPath) {
 				Write-Host "Reading from .tran folder..."
 			}
 		`)

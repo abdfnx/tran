@@ -17,7 +17,7 @@ import (
 
 // HandleReceiveCommand is the receive application.
 func HandleReceiveCommand(programOptions models.TranOptions, password string) {
-	// communicate ui updates on this channel between receiverClient and handleReceiveCmmand
+	// communicate ui updates on this channel between receiverClient and handleReceiveCommand
 	uiCh := make(chan receiver.UIUpdate)
 	// initialize a receiverClient with a UI
 	receiverClient := receiver.WithUI(receiver.NewReceiver(programOptions), uiCh)

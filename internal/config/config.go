@@ -25,7 +25,7 @@ type Config struct {
 	Tran TranConfig `mapstructure:"config"`
 }
 
-func defualtEditor() string {
+func defaultEditor() string {
 	if runtime.GOOS == "windows" {
 		return "notepad.exe"
 	}
@@ -64,7 +64,7 @@ func LoadConfig(startDir *pflag.Flag) {
 	viper.SetDefault("config.start_dir", ".")
 	viper.SetDefault("config.enable_mousewheel", true)
 	viper.SetDefault("config.borderless", false)
-	viper.SetDefault("config.editor", defualtEditor())
+	viper.SetDefault("config.editor", defaultEditor())
 	viper.SetDefault("config.show_updates", true)
 
 	if err := viper.SafeWriteConfig(); err != nil {

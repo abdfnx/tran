@@ -73,7 +73,7 @@ tasks:
       - docker build -t "{{ .TRAN_CONTAINER }}" --cache-from "{{ .TRAN_CONTAINER }}":latest . && \
       - docker push "{{ .TRAN_CONTAINER }}"
 
-  check_node_moduels:
+  check_node_modules:
     dir: ./scripts/gh-tran
     cmds:
       - if ! [ -d "node_modules" ]; then yarn; fi
@@ -81,5 +81,5 @@ tasks:
   ght:
     deps: [ build ]
     cmds:
-      - task: check_node_moduels
+      - task: check_node_modules
       - node ./scripts/gh-tran/gh-trn.js

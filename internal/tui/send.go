@@ -48,7 +48,7 @@ func HandleSendCommand(programOptions models.TranOptions, fileNames []string) {
 	senderClient = sender.WithServer(senderClient, <-startServerCh)
 
 	go startDirectCommunicationServer(senderClient, senderUI, doneCh)
-	// prepare a fallback to relay communications through tranx if direct communications unavailble
+	// prepare a fallback to relay communications through tranx if direct communications unavailable
 	prepareRelayCommunicationFallback(senderClient, senderUI, relayCh, doneCh)
 
 	<-doneCh

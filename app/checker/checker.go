@@ -28,7 +28,7 @@ func Check(buildVersion string) {
 		} else if isFromUsrBinDir {
 			return "curl -fsSL https://cutt.ly/tran-cli | bash"
 		} else if isFromGHCLI {
-			return "gh extention upgrade tran"
+			return "gh extension upgrade tran"
 		} else if isFromAppData {
 			return "iwr -useb https://cutt.ly/tran-win | iex"
 		}
@@ -38,7 +38,7 @@ func Check(buildVersion string) {
 
 	if buildVersion != latestVersion && cfg.Tran.ShowUpdates {
 		fmt.Fprintf(stderr, "%s %s → %s\n",
-		ansi.Color("There's a new version of ", "yellow") + ansi.Color("tran", "cyan") + ansi.Color(" is avalaible:", "yellow"),
+		ansi.Color("There's a new version of ", "yellow") + ansi.Color("tran", "cyan") + ansi.Color(" is available:", "yellow"),
 		ansi.Color(buildVersion, "cyan"),
 		ansi.Color(latestVersion, "cyan"))
 

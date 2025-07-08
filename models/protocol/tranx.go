@@ -11,7 +11,7 @@ type TranxMessageType int
 const (
 	TranxToSenderBind TranxMessageType = iota // An ID for this connection is bound and communicated
 	SenderToTranxEstablish   // Sender has generated and hashed password
-	ReceiverToTranxEstablish // Passsword has been communicated to receiver who has hashed it
+	ReceiverToTranxEstablish // Password has been communicated to receiver who has hashed it
 	TranxToSenderReady       // Tranx announces to sender that receiver is connected
 	SenderToTranxPAKE        // Sender sends PAKE information to tranx
 	TranxToReceiverPAKE      // Tranx forwards PAKE information to receiver

@@ -13,14 +13,14 @@ import (
 )
 
 // ConnectToTranx, establishes the connection with the tranx server.
-// Paramaters:
+// Parameters:
 // tranxAddress 	-   IP or hostname of the tranx server
 // tranxPort 		- 	port of the tranx server
 // startServerCh    -   channel to communicate to the caller when to start the server, and with which options.
 // passwordCh       -   channel to communicate the password to the caller.
 // startServerCh    -   channel to communicate to the caller when to start the server, and with which options.
 // payloadReady    	-   channel over which the caller can communicate when the payload is ready.
-// relayCh         	-   channel to commuincate if we are using relay (tranx) for transfer.
+// relayCh         	-   channel to communicated if we are using relay (tranx) for transfer.
 func (s *Sender) ConnectToTranx(
 	tranxAddress string,
 	tranxPort int,
