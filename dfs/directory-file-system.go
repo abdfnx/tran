@@ -23,6 +23,11 @@ const (
 	FilesListingType       = "files"
 )
 
+// IsRootedPath reports whether path is absolute on this platform or begins at the filesystem root.
+func IsRootedPath(path string) bool {
+	return filepath.IsAbs(path) || strings.HasPrefix(path, RootDirectory)
+}
+
 // RenameDirectoryItem renames a directory or files given a source and destination.
 func RenameDirectoryItem(src, dst string) error {
 	err := os.Rename(src, dst)

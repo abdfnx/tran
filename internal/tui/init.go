@@ -3,7 +3,6 @@ package tui
 import (
 	"os"
 	"log"
-	"strings"
 	"path/filepath"
 
 	"github.com/spf13/viper"
@@ -25,7 +24,7 @@ func (b Bubble) Init() tea.Cmd {
 				return nil
 			}
 
-			if strings.HasPrefix(startDir, dfs.RootDirectory) {
+			if dfs.IsRootedPath(startDir) {
 				cmds = append(cmds, b.updateDirectoryListingCmd(startDir))
 			} else {
 				path, err := os.Getwd()
